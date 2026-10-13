@@ -1,0 +1,386 @@
+﻿<Window x:Class="Framework.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Framework.ViewModel"
+        xmlns:convert="clr-namespace:Framework.Converters"
+        mc:Ignorable="d"
+        Title="Image Processing"
+        Height="750"
+        Width="1200"
+        WindowStartupLocation="CenterScreen"
+        Icon="../Images/Icon.png">
+
+    <Window.DataContext>
+        <local:MainVM/>
+    </Window.DataContext>
+
+    <Grid Background="{Binding Path=Theme.BackgroundColor}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.Resources>
+            <convert:ArrayMultiValueConverter x:Key="arrayMultiValueConverter"/>
+
+            <Style TargetType="MenuItem">
+                <Setter Property="Foreground" Value="#1E1E1E"/>
+            </Style>
+
+            <Style x:Key="bothCanvasesMenuItem" TargetType="MenuItem" BasedOn="{StaticResource {x:Type MenuItem}}">
+                <Setter Property="CommandParameter">
+                    <Setter.Value>
+                        <MultiBinding Converter="{StaticResource arrayMultiValueConverter}">
+                            <Binding ElementName="initialImageCanvas"/>
+                            <Binding ElementName="processedImageCanvas"/>
+                        </MultiBinding>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+
+        <Menu Background="{Binding Path=Theme.MenuBackgroundColor}"
+              Grid.Row="0" 
+              Grid.ColumnSpan="2">
+            <Menu.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <DockPanel HorizontalAlignment="Stretch"/>
+                </ItemsPanelTemplate>
+            </Menu.ItemsPanel>
+
+            <MenuItem Header="File"
+                      Background="{Binding Path=Theme.MenuItemBackgroundColor}"
+                      Foreground="{Binding Path=Theme.MenuItemForegroundColor}">
+                <MenuItem Header="Load grayscale image"
+                          Command="{Binding Path=MenuCommands.LoadGrayscaleImageCommand}"
+                          Style="{StaticResource bothCanvasesMenuItem}"/>
+                <MenuItem Header="Load color image" 
+                          Command="{Binding Path=MenuCommands.LoadColorImageCommand}"
+                          Style="{StaticResource bothCanvasesMenuItem}"/>
+                <Separator/>
+                <MenuItem Header="Save processed image"
+                          Command="{Binding Path=MenuCommands.SaveProcessedImageCommand}"/>
+                <Separator/>
+                <MenuItem Header="Exit"
+                          Command="{Binding Path=MenuCommands.ExitCommand}"/>
+            </MenuItem>
+
+            <MenuItem Header="Edit"
+                      Background="{Binding Path=Theme.MenuItemBackgroundColor}"
+                      Foreground="{Binding Path=Theme.MenuItemForegroundColor}">
+                <MenuItem Header="Remove drawn shapes from initial canvas"
+                          Command="{Binding Path=MenuCommands.RemoveDrawnShapesCommand}"
+                          CommandParameter="{Binding ElementName=initialImageCanvas}"/>
+                <MenuItem Header="Remove drawn shapes from processed canvas"
+                          Command="{Binding Path=MenuCommands.RemoveDrawnShapesCommand}"
+                          CommandParameter="{Binding ElementName=processedImageCanvas}"/>
+                <MenuItem Header="Remove drawn shapes from both canvases"
+                          Command="{Binding Path=MenuCommands.RemoveDrawnShapesCommand}"
+                          Style="{StaticResource bothCanvasesMenuItem}"/>
+                <Separator/>
+                <MenuItem Header="Clear initial canvas"
+                          Command="{Binding Path=MenuCommands.ClearInitialCanvasCommand}"
+                          CommandParameter="{Binding ElementName=initialImageCanvas}"/>
+                <MenuItem Header="Clear processed canvas"
+                          Command="{Binding Path=MenuCommands.ClearProcessedCanvasCommand}"
+                          CommandParameter="{Binding ElementName=processedImageCanvas}"/>
+                <MenuItem Header="Clear both canvases"
+                          Command="{Binding Path=MenuCommands.ClearCommand}"
+                          Style="{StaticResource bothCanvasesMenuItem}"/>
+            </MenuItem>
+
+            <MenuItem Header="Tools" 
+                      Background="{Binding Path=Theme.MenuItemBackgroundColor}"
+                      Foreground="{Binding Path=Theme.MenuItemForegroundColor}">
+                <MenuItem Header="Theme"
+                          x:Name="themeMenu">
+                    <MenuItem Header="Lime Green"
+                              Click="ThemeModeSelector"/>
+                    <MenuItem Header="Forest Green"
+                              Click="ThemeModeSelector"/>
+                    <MenuItem Header="Pale Pink"
+                              Click="ThemeModeSelector"/>
+                    <MenuItem Header="Lavender Violet"
+                              Click="ThemeModeSelector"/>
+                    <MenuItem Header="Cobalt Blue"
+                              Click="ThemeModeSelector"/>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Magnifier"
+                          Command="{Binding Path=MenuCommands.MagnifierCommand}"/>
+                <MenuItem Header="Visualize color levels">
+                    <MenuItem Header="Row color levels"
+                              Command="{Binding Path=MenuCommands.RowColorLevelsCommand}"/>
+                    <MenuItem Header="Column color levels"
+                              Command="{Binding Path=MenuCommands.ColumnColorLevelsCommand}"/>
+                </MenuItem>
+                <MenuItem Header="Visualize image histogram">
+                    <MenuItem Header="Initial image histogram"
+                              Command="{Binding Path=MenuCommands.HistogramInitialImageCommand}"/>
+                    <MenuItem Header="Processed image histogram"
+                              Command="{Binding Path=MenuCommands.HistogramProcessedImageCommand}"/>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Copy" 
+                          Command="{Binding Path=MenuCommands.CopyImageCommand}"
+                          CommandParameter="{Binding ElementName=processedImageCanvas}"/>
+                <MenuItem Header="Invert" 
+                          Command="{Binding Path=MenuCommands.InvertImageCommand}"
+                          CommandParameter="{Binding ElementName=processedImageCanvas}"/>
+                <MenuItem Header="Convert to grayscale"
+                          Command="{Binding Path=MenuCommands.ConvertImageToGrayscaleCommand}"
+                          CommandParameter="{Binding ElementName=processedImageCanvas}"/>
+                <MenuItem Header="Binary"
+                          Command="{Binding Path=MenuCommands.BinaryImageCommand}"
+                          CommandParameter="{Binding ElementName=processedImageCanvas}"/>
+                <MenuItem Header="Mirror"
+                          Command="{Binding Path=MenuCommands.MirrorImageCommand}"
+                          CommandParameter="{Binding ElementName=processedImageCanvas}"/>
+                <MenuItem Header="Rotate"
+                          Command="{Binding Path=MenuCommands.RotateImageCommand}"
+                          CommandParameter="{Binding ElementName=processedImageCanvas}"/> 
+
+                <!--Separator/-->
+                
+                
+            </MenuItem>
+
+            <MenuItem Header="Pointwise operations"
+                      Background="{Binding Path=Theme.MenuItemBackgroundColor}"
+                      Foreground="{Binding Path=Theme.MenuItemForegroundColor}">
+
+            </MenuItem>
+
+            <MenuItem Header="Thresholding"
+                      Background="{Binding Path=Theme.MenuItemBackgroundColor}"
+                      Foreground="{Binding Path=Theme.MenuItemForegroundColor}">
+
+            </MenuItem>
+
+            <MenuItem Header="Filters" 
+                      Background="{Binding Path=Theme.MenuItemBackgroundColor}"
+                      Foreground="{Binding Path=Theme.MenuItemForegroundColor}">
+                <MenuItem Header="Low-pass">
+
+                </MenuItem>
+                <MenuItem Header="High-pass">
+
+                </MenuItem>
+            </MenuItem>
+
+            <MenuItem Header="Morphological operations"
+                      Background="{Binding Path=Theme.MenuItemBackgroundColor}"
+                      Foreground="{Binding Path=Theme.MenuItemForegroundColor}">
+
+            </MenuItem>
+
+            <MenuItem Header="Geometric transformations"
+                      Background="{Binding Path=Theme.MenuItemBackgroundColor}"
+                      Foreground="{Binding Path=Theme.MenuItemForegroundColor}">
+
+            </MenuItem>
+
+            <MenuItem Header="Segmentation"
+                      Background="{Binding Path=Theme.MenuItemBackgroundColor}"
+                      Foreground="{Binding Path=Theme.MenuItemForegroundColor}">
+
+            </MenuItem>
+
+            <MenuItem Header="Use processed image as initial image" 
+                      Background="{Binding Path=Theme.MenuItemBackgroundColor}"
+                      Foreground="{Binding Path=Theme.MenuItemForegroundColor}"
+                      HorizontalAlignment="Right" 
+                      Command="{Binding Path=MenuCommands.UseProcessedImageAsInitialImageCommand}"
+                      Style="{StaticResource bothCanvasesMenuItem}"/>
+        </Menu>
+
+        <TextBlock Grid.Row="1"
+                   Grid.Column="0"
+                   Text="Initial Image"
+                   Foreground="{Binding Path=Theme.TextForeground}"
+                   FontSize="15"
+                   TextAlignment="Center"
+                   Height="20"
+                   Width="120"/>
+        <TextBlock Grid.Row="1"
+                   Grid.Column="1"
+                   Text="Processed Image"
+                   Foreground="{Binding Path=Theme.TextForeground}"
+                   FontSize="15"
+                   TextAlignment="Center"
+                   Height="20"
+                   Width="120"/>
+
+        <Label Grid.Column="0"
+               Grid.Row="2"
+               Width="auto"
+               Height="auto"
+               Margin="10,0,10,0"
+               Background="{Binding Path=Theme.CanvasBackgroundColor}"
+               BorderBrush="{Binding Path=Theme.CanvasBorderBrush}"
+               BorderThickness="5"
+               VerticalContentAlignment="Center"
+               HorizontalContentAlignment="Center">
+            <ScrollViewer x:Name="initialImageCanvasScrollViewer"
+                          HorizontalScrollBarVisibility="Auto" 
+                          VerticalScrollBarVisibility="Auto" 
+                          ScrollChanged="ScrollChanged">
+                <Canvas x:Name="initialImageCanvas"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Width="{Binding Path=InitialCanvasWidth}"
+                        Height="{Binding Path=InitialCanvasHeight}"
+                        Background="Transparent"
+                        MouseMove="ImageMouseMove"
+                        MouseLeftButtonDown="ImageMouseLeftButtonDown"
+                        MouseRightButtonDown="ImageMouseRightButtonDown">
+                    <!-- apply the zoom to the whole canvas so overlays scale together with the image -->
+                    <Canvas.LayoutTransform>
+                        <ScaleTransform ScaleX="{Binding ElementName=sliderZoom, Path=Value}" 
+                                        ScaleY="{Binding ElementName=sliderZoom, Path=Value}"/>
+                    </Canvas.LayoutTransform>
+                    <Image x:Name="initialImage"
+                           RenderOptions.BitmapScalingMode="NearestNeighbor"
+                           Source="{Binding Path=InitialImage}"/>
+                </Canvas>
+            </ScrollViewer>
+        </Label>
+
+        <Label Grid.Column="1"
+               Grid.Row="2"
+               Width="auto"
+               Height="auto"
+               Margin="10,0,10,0"
+               Background="{Binding Path=Theme.CanvasBackgroundColor}"
+               BorderBrush="{Binding Path=Theme.CanvasBorderBrush}"
+               BorderThickness="5"
+               VerticalContentAlignment="Center"
+               HorizontalContentAlignment="Center">
+            <ScrollViewer x:Name="processedImageCanvasScrollViewer"
+                          HorizontalScrollBarVisibility="Auto" 
+                          VerticalScrollBarVisibility="Auto" 
+                          ScrollChanged="ScrollChanged">
+                <Canvas x:Name="processedImageCanvas"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Width="{Binding Path=ProcessedCanvasWidth}"
+                        Height="{Binding Path=ProcessedCanvasHeight}"
+                        Background="Transparent"
+                        MouseMove="ImageMouseMove"
+                        MouseLeftButtonDown="ImageMouseLeftButtonDown"
+                        MouseRightButtonDown="ImageMouseRightButtonDown">
+                    <Canvas.LayoutTransform>
+                        <ScaleTransform ScaleX="{Binding ElementName=sliderZoom, Path=Value}" 
+                                        ScaleY="{Binding ElementName=sliderZoom, Path=Value}"/>
+                    </Canvas.LayoutTransform>
+                    <Image x:Name="processedImage"
+                           RenderOptions.BitmapScalingMode="NearestNeighbor"
+                           Source="{Binding Path=ProcessedImage}"/>
+                </Canvas>
+            </ScrollViewer>
+        </Label>
+
+        <Grid Grid.Row="3"
+                    Grid.ColumnSpan="2"
+                    Height="40"
+                    Margin="10,0,10,0">
+            <Button Content="Reset"
+                    Command="{Binding Path=ResetZoomCommand}"
+                    Foreground="{Binding Path=Theme.ButtonForegroundColor}"
+                    Background="{Binding Path=Theme.ButtonBackgroundColor}"
+                    BorderBrush="{Binding Path=Theme.ButtonBorderBrush}"
+                    BorderThickness="2"
+                    HorizontalAlignment="Left"
+                    Height="35"
+                    Width="80"/>
+            <Slider x:Name="sliderZoom"
+                    Orientation="Horizontal"
+                    Foreground="{Binding Path=Theme.TextForeground}"
+                    Value="{Binding Path=ScaleValue}"
+                    Minimum="0.1"
+                    Maximum="10.00"
+                    SmallChange="0.05"
+                    LargeChange="0.1"
+                    TickFrequency="0.1"
+                    TickPlacement="BottomRight"
+                    Cursor="Hand"
+                    ValueChanged="SliderZoom_ValueChanged"
+                    Margin="100,0,100,0"
+                    Height="30"
+                    Width="auto"/>
+            <TextBlock Text="{Binding Path=Value, ElementName=sliderZoom, StringFormat=N2}" 
+                       Foreground="{Binding Path=Theme.TextForeground}"
+                       FontSize="15"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Right"
+                       Height="30"
+                       Width="50"
+                       Margin="0,0,40,5"/>
+            <TextBlock Text="x"
+                       Foreground="{Binding Path=Theme.TextForeground}"
+                       FontSize="15"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Right"
+                       Height="30"
+                       Width="30"
+                       Margin="0,0,20,5"/>
+        </Grid>
+
+        <Grid Grid.Column="0"
+              Grid.Row="4"
+              Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="1" 
+                       Foreground="{Binding Path=Theme.TextForeground}"
+                       Text="{Binding Path=XPos}"
+                       FontSize="15" 
+                       HorizontalAlignment="Center"/>
+            <TextBlock Grid.Column="2" 
+                       Foreground="{Binding Path=Theme.TextForeground}"
+                       Text="{Binding Path=YPos}"
+                       FontSize="15" 
+                       HorizontalAlignment="Center"/>
+
+            <TextBlock Grid.Column="5"
+                       Foreground="{Binding Path=Theme.TextForeground}"
+                       Text="{Binding Path=GrayValue}"
+                       FontSize="15"
+                       HorizontalAlignment="Center"/>
+
+            <TextBlock Grid.Column="4"
+                       Foreground="{Binding Path=Theme.TextForeground}"
+                       Text="{Binding Path=RedValue}"
+                       FontSize="15"
+                       HorizontalAlignment="Center"/>
+            <TextBlock Grid.Column="5"
+                       Foreground="{Binding Path=Theme.TextForeground}"
+                       Text="{Binding Path=GreenValue}"
+                       FontSize="15"
+                       HorizontalAlignment="Center"/>
+            <TextBlock Grid.Column="6"
+                       Foreground="{Binding Path=Theme.TextForeground}"
+                       Text="{Binding Path=BlueValue}"
+                       FontSize="15"
+                       HorizontalAlignment="Center"/>
+        </Grid>
+    </Grid>
+</Window>

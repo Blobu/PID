@@ -1,0 +1,76 @@
+﻿<Window x:Class="Framework.View.DialogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Framework.ViewModel"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=local:DialogVM}"
+        Title="Dialog Box"
+        Closing="WindowClosing"
+        MinHeight="100"
+        Height="{Binding Path=Height, Mode=TwoWay}"
+        Width="400"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize"
+        Icon="../Images/Icon.png">
+
+    <Grid Background="{Binding Path=Theme.BackgroundColor}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
+        <ItemsControl x:Name="parameterList"
+                      Grid.Row="1"
+                      Grid.Column="1"
+                      Focusable="False"
+                      ItemsSource="{Binding Path=Parameters}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Path=ParamText}"
+                                   Height="{Binding Path=Height}"
+                                   Foreground="{Binding Path=DataContext.Theme.TextForeground, RelativeSource={RelativeSource AncestorType=Window}}"/>
+
+                        <TextBox Text="{Binding Path=InputText, UpdateSourceTrigger=PropertyChanged}"
+                                 Loaded="ParameterBoxLoaded"
+                                 Height="{Binding Path=Height}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+        <StackPanel Grid.Row="2"
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Button Content="Done"
+                    IsDefault="True"
+                    Height="25"
+                    Width="60"
+                    Margin="0,0,10,0"
+                    BorderThickness="2"
+                    Foreground="{Binding Path=Theme.ButtonForegroundColor}"
+                    Background="{Binding Path=Theme.ButtonBackgroundColor}"
+                    BorderBrush="{Binding Path=Theme.ButtonBorderBrush}"
+                    Click="DoneClick"/>
+            <Button Content="Cancel"
+                    IsCancel="True"
+                    Height="25"
+                    Width="60"
+                    BorderThickness="2"
+                    Foreground="{Binding Path=Theme.ButtonForegroundColor}"
+                    Background="{Binding Path=Theme.ButtonBackgroundColor}"
+                    BorderBrush="{Binding Path=Theme.ButtonBorderBrush}"/>
+        </StackPanel>
+    </Grid>
+</Window>

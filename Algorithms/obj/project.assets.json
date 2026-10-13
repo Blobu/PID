@@ -1,0 +1,583 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.8": {
+      "EmguCV/3.1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK": "1.1.2225",
+          "OpenTK.GLControl": "1.1.2225",
+          "ZedGraph": "5.1.5"
+        },
+        "compile": {
+          "lib/net30/Emgu.CV.UI.GL.dll": {
+            "related": ".xml"
+          },
+          "lib/net30/Emgu.CV.UI.dll": {
+            "related": ".GL.xml;.xml"
+          },
+          "lib/net30/Emgu.CV.World.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net30/Emgu.CV.UI.GL.dll": {
+            "related": ".xml"
+          },
+          "lib/net30/Emgu.CV.UI.dll": {
+            "related": ".GL.xml;.xml"
+          },
+          "lib/net30/Emgu.CV.World.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/EmguCV.props": {},
+          "build/EmguCV.targets": {}
+        }
+      },
+      "OpenTK/1.1.2225": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Drawing",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net20/OpenTK.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/OpenTK.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OpenTK.GLControl/1.1.2225": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK": "1.1.2225"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Drawing",
+          "System.Windows.Forms",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net20/OpenTK.GLControl.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/OpenTK.GLControl.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ZedGraph/5.1.5": {
+        "type": "package",
+        "compile": {
+          "lib/ZedGraph.dll": {}
+        },
+        "runtime": {
+          "lib/ZedGraph.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win": {
+      "EmguCV/3.1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK": "1.1.2225",
+          "OpenTK.GLControl": "1.1.2225",
+          "ZedGraph": "5.1.5"
+        },
+        "compile": {
+          "lib/net30/Emgu.CV.UI.GL.dll": {
+            "related": ".xml"
+          },
+          "lib/net30/Emgu.CV.UI.dll": {
+            "related": ".GL.xml;.xml"
+          },
+          "lib/net30/Emgu.CV.World.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net30/Emgu.CV.UI.GL.dll": {
+            "related": ".xml"
+          },
+          "lib/net30/Emgu.CV.UI.dll": {
+            "related": ".GL.xml;.xml"
+          },
+          "lib/net30/Emgu.CV.World.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/EmguCV.props": {},
+          "build/EmguCV.targets": {}
+        }
+      },
+      "OpenTK/1.1.2225": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Drawing",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net20/OpenTK.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/OpenTK.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OpenTK.GLControl/1.1.2225": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK": "1.1.2225"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Drawing",
+          "System.Windows.Forms",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net20/OpenTK.GLControl.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/OpenTK.GLControl.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ZedGraph/5.1.5": {
+        "type": "package",
+        "compile": {
+          "lib/ZedGraph.dll": {}
+        },
+        "runtime": {
+          "lib/ZedGraph.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win-arm64": {
+      "EmguCV/3.1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK": "1.1.2225",
+          "OpenTK.GLControl": "1.1.2225",
+          "ZedGraph": "5.1.5"
+        },
+        "compile": {
+          "lib/net30/Emgu.CV.UI.GL.dll": {
+            "related": ".xml"
+          },
+          "lib/net30/Emgu.CV.UI.dll": {
+            "related": ".GL.xml;.xml"
+          },
+          "lib/net30/Emgu.CV.World.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net30/Emgu.CV.UI.GL.dll": {
+            "related": ".xml"
+          },
+          "lib/net30/Emgu.CV.UI.dll": {
+            "related": ".GL.xml;.xml"
+          },
+          "lib/net30/Emgu.CV.World.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/EmguCV.props": {},
+          "build/EmguCV.targets": {}
+        }
+      },
+      "OpenTK/1.1.2225": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Drawing",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net20/OpenTK.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/OpenTK.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OpenTK.GLControl/1.1.2225": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK": "1.1.2225"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Drawing",
+          "System.Windows.Forms",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net20/OpenTK.GLControl.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/OpenTK.GLControl.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ZedGraph/5.1.5": {
+        "type": "package",
+        "compile": {
+          "lib/ZedGraph.dll": {}
+        },
+        "runtime": {
+          "lib/ZedGraph.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win-x64": {
+      "EmguCV/3.1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK": "1.1.2225",
+          "OpenTK.GLControl": "1.1.2225",
+          "ZedGraph": "5.1.5"
+        },
+        "compile": {
+          "lib/net30/Emgu.CV.UI.GL.dll": {
+            "related": ".xml"
+          },
+          "lib/net30/Emgu.CV.UI.dll": {
+            "related": ".GL.xml;.xml"
+          },
+          "lib/net30/Emgu.CV.World.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net30/Emgu.CV.UI.GL.dll": {
+            "related": ".xml"
+          },
+          "lib/net30/Emgu.CV.UI.dll": {
+            "related": ".GL.xml;.xml"
+          },
+          "lib/net30/Emgu.CV.World.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/EmguCV.props": {},
+          "build/EmguCV.targets": {}
+        }
+      },
+      "OpenTK/1.1.2225": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Drawing",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net20/OpenTK.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/OpenTK.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OpenTK.GLControl/1.1.2225": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK": "1.1.2225"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Drawing",
+          "System.Windows.Forms",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net20/OpenTK.GLControl.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/OpenTK.GLControl.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ZedGraph/5.1.5": {
+        "type": "package",
+        "compile": {
+          "lib/ZedGraph.dll": {}
+        },
+        "runtime": {
+          "lib/ZedGraph.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win-x86": {
+      "EmguCV/3.1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK": "1.1.2225",
+          "OpenTK.GLControl": "1.1.2225",
+          "ZedGraph": "5.1.5"
+        },
+        "compile": {
+          "lib/net30/Emgu.CV.UI.GL.dll": {
+            "related": ".xml"
+          },
+          "lib/net30/Emgu.CV.UI.dll": {
+            "related": ".GL.xml;.xml"
+          },
+          "lib/net30/Emgu.CV.World.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net30/Emgu.CV.UI.GL.dll": {
+            "related": ".xml"
+          },
+          "lib/net30/Emgu.CV.UI.dll": {
+            "related": ".GL.xml;.xml"
+          },
+          "lib/net30/Emgu.CV.World.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/EmguCV.props": {},
+          "build/EmguCV.targets": {}
+        }
+      },
+      "OpenTK/1.1.2225": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Drawing",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net20/OpenTK.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/OpenTK.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OpenTK.GLControl/1.1.2225": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK": "1.1.2225"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Drawing",
+          "System.Windows.Forms",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net20/OpenTK.GLControl.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/OpenTK.GLControl.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ZedGraph/5.1.5": {
+        "type": "package",
+        "compile": {
+          "lib/ZedGraph.dll": {}
+        },
+        "runtime": {
+          "lib/ZedGraph.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EmguCV/3.1.0.1": {
+      "sha512": "xiYFPDqGeHsMQLhY/GLgBwduIyAJuGug4T1X0lhQ4JbdPgPcR9P2lk5HTQ8npLLFVdvNPGLLzQGYxksy2jq52Q==",
+      "type": "package",
+      "path": "emgucv/3.1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/EmguCV.props",
+        "build/EmguCV.targets",
+        "build/native/x64/cvextern.dll",
+        "build/native/x64/opencv_ffmpeg310_64.dll",
+        "build/native/x86/cvextern.dll",
+        "build/native/x86/opencv_ffmpeg310.dll",
+        "emgucv.3.1.0.1.nupkg.sha512",
+        "emgucv.nuspec",
+        "lib/net30/Emgu.CV.UI.GL.dll",
+        "lib/net30/Emgu.CV.UI.GL.xml",
+        "lib/net30/Emgu.CV.UI.dll",
+        "lib/net30/Emgu.CV.UI.xml",
+        "lib/net30/Emgu.CV.World.dll",
+        "lib/net30/Emgu.CV.World.xml"
+      ]
+    },
+    "OpenTK/1.1.2225": {
+      "sha512": "LznumONQ+XDP/mVCyqZJtaeu/4sKsrSdBC309CE7TsiKStNU4WaOQDwQ3nS85zsAoZGmsbEzrvbjH3/LibKSug==",
+      "type": "package",
+      "path": "opentk/1.1.2225",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/OpenTK.dll.config",
+        "lib/net20/OpenTK.dll",
+        "lib/net20/OpenTK.xml",
+        "opentk.1.1.2225.nupkg.sha512",
+        "opentk.nuspec"
+      ]
+    },
+    "OpenTK.GLControl/1.1.2225": {
+      "sha512": "nzZMXHuHWnOMyMaxjuyjoKawYLW5Oxrczpyidpu6QmQmiucJp+fBTGY5zPlmwr3ufkbyOEfQRnjT2+d92YI4dQ==",
+      "type": "package",
+      "path": "opentk.glcontrol/1.1.2225",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/OpenTK.GLControl.dll",
+        "lib/net20/OpenTK.GLControl.xml",
+        "opentk.glcontrol.1.1.2225.nupkg.sha512",
+        "opentk.glcontrol.nuspec"
+      ]
+    },
+    "ZedGraph/5.1.5": {
+      "sha512": "CclJINtatXbtBS2r4FFMPaGuwokmk5OlBnuW+QN5+d/CST0fv2N88pm8c3rIoOkXMiWvWArE+Jz1d2WA0QPoDQ==",
+      "type": "package",
+      "path": "zedgraph/5.1.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License-LGPL.txt",
+        "lib/ZedGraph.XML",
+        "lib/ZedGraph.dll",
+        "lib/de/ZedGraph.resources.dll",
+        "lib/es/ZedGraph.resources.dll",
+        "lib/fr/ZedGraph.resources.dll",
+        "lib/hu/ZedGraph.resources.dll",
+        "lib/it/ZedGraph.resources.dll",
+        "lib/ja/ZedGraph.resources.dll",
+        "lib/pt/ZedGraph.resources.dll",
+        "lib/ru/ZedGraph.resources.dll",
+        "lib/sk/ZedGraph.resources.dll",
+        "lib/sv/ZedGraph.resources.dll",
+        "lib/tr/ZedGraph.resources.dll",
+        "lib/zh-cn/ZedGraph.resources.dll",
+        "lib/zh-tw/ZedGraph.resources.dll",
+        "readme.txt",
+        "zedgraph.5.1.5.nupkg.sha512",
+        "zedgraph.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.8": [
+      "EmguCV >= 3.1.0.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\pingu\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Facultate\\AN_3_SEM_1\\PID\\PID_Framework\\Algorithms\\Algorithms.csproj",
+      "projectName": "Algorithms",
+      "projectPath": "C:\\Facultate\\AN_3_SEM_1\\PID\\PID_Framework\\Algorithms\\Algorithms.csproj",
+      "packagesPath": "C:\\Users\\pingu\\.nuget\\packages\\",
+      "outputPath": "C:\\Facultate\\AN_3_SEM_1\\PID\\PID_Framework\\Algorithms\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "UsingMicrosoftNETSdk": false,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\pingu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net48"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net48": {
+          "framework": "net48",
+          "projectReferences": {}
+        }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net48": {
+        "framework": "net48",
+        "dependencies": {
+          "EmguCV": {
+            "target": "Package",
+            "version": "[3.1.0.1, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-arm64": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}
