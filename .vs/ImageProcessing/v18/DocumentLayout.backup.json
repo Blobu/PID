@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "C:\\Facultate\\AN_3_SEM_1\\PID\\PID_Framework\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{46916620-F543-4A92-93C0-F8FBEFECFBD6}|Framework\\Framework.csproj|C:\\Facultate\\AN_3_SEM_1\\PID\\PID_Framework\\framework\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{46916620-F543-4A92-93C0-F8FBEFECFBD6}|Framework\\Framework.csproj|solutionrelative:framework\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{46916620-F543-4A92-93C0-F8FBEFECFBD6}|Framework\\Framework.csproj|C:\\Facultate\\AN_3_SEM_1\\PID\\PID_Framework\\framework\\viewmodel\\commands\\menucommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46916620-F543-4A92-93C0-F8FBEFECFBD6}|Framework\\Framework.csproj|solutionrelative:framework\\viewmodel\\commands\\menucommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46916620-F543-4A92-93C0-F8FBEFECFBD6}|Framework\\Framework.csproj|c:\\facultate\\an_3_sem_1\\pid\\pid_framework\\framework\\utilities\\drawinghelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46916620-F543-4A92-93C0-F8FBEFECFBD6}|Framework\\Framework.csproj|solutionrelative:framework\\utilities\\drawinghelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46916620-F543-4A92-93C0-F8FBEFECFBD6}|Framework\\Framework.csproj|c:\\facultate\\an_3_sem_1\\pid\\pid_framework\\framework\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{46916620-F543-4A92-93C0-F8FBEFECFBD6}|Framework\\Framework.csproj|C:\\Facultate\\AN_3_SEM_1\\PID\\PID_Framework\\framework\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46916620-F543-4A92-93C0-F8FBEFECFBD6}|Framework\\Framework.csproj|solutionrelative:framework\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2204949-5A56-49A4-9EF9-E4A177560169}|Algorithms\\Algorithms.csproj|c:\\facultate\\an_3_sem_1\\pid\\pid_framework\\algorithms\\utilities\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{46916620-F543-4A92-93C0-F8FBEFECFBD6}|Framework\\Framework.csproj|c:\\facultate\\an_3_sem_1\\pid\\pid_framework\\framework\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{46916620-F543-4A92-93C0-F8FBEFECFBD6}|Framework\\Framework.csproj|solutionrelative:framework\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2204949-5A56-49A4-9EF9-E4A177560169}|Algorithms\\Algorithms.csproj|c:\\facultate\\an_3_sem_1\\pid\\pid_framework\\algorithms\\sections\\pointwiseoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2204949-5A56-49A4-9EF9-E4A177560169}|Algorithms\\Algorithms.csproj|solutionrelative:algorithms\\sections\\pointwiseoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2204949-5A56-49A4-9EF9-E4A177560169}|Algorithms\\Algorithms.csproj|C:\\Facultate\\AN_3_SEM_1\\PID\\PID_Framework\\algorithms\\utilities\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2204949-5A56-49A4-9EF9-E4A177560169}|Algorithms\\Algorithms.csproj|solutionrelative:algorithms\\utilities\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46916620-F543-4A92-93C0-F8FBEFECFBD6}|Framework\\Framework.csproj|c:\\facultate\\an_3_sem_1\\pid\\pid_framework\\framework\\viewmodel\\commands\\menucommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46916620-F543-4A92-93C0-F8FBEFECFBD6}|Framework\\Framework.csproj|solutionrelative:framework\\viewmodel\\commands\\menucommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{46916620-F543-4A92-93C0-F8FBEFECFBD6}|Framework\\Framework.csproj|C:\\Facultate\\AN_3_SEM_1\\PID\\PID_Framework\\framework\\utilities\\drawinghelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46916620-F543-4A92-93C0-F8FBEFECFBD6}|Framework\\Framework.csproj|solutionrelative:framework\\utilities\\drawinghelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2204949-5A56-49A4-9EF9-E4A177560169}|Algorithms\\Algorithms.csproj|C:\\Facultate\\AN_3_SEM_1\\PID\\PID_Framework\\algorithms\\tools\\tools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +42,20 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "PointwiseOperations.cs",
+              "DocumentMoniker": "C:\\Facultate\\AN_3_SEM_1\\PID\\PID_Framework\\Algorithms\\Sections\\PointwiseOperations.cs",
+              "RelativeDocumentMoniker": "Algorithms\\Sections\\PointwiseOperations.cs",
+              "ToolTip": "C:\\Facultate\\AN_3_SEM_1\\PID\\PID_Framework\\Algorithms\\Sections\\PointwiseOperations.cs",
+              "RelativeToolTip": "Algorithms\\Sections\\PointwiseOperations.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwCwAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T07:44:43.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "DrawingHelper.cs",
               "DocumentMoniker": "C:\\Facultate\\AN_3_SEM_1\\PID\\PID_Framework\\Framework\\Utilities\\DrawingHelper.cs",
               "RelativeDocumentMoniker": "Framework\\Utilities\\DrawingHelper.cs",
@@ -46,25 +63,24 @@
               "RelativeToolTip": "Framework\\Utilities\\DrawingHelper.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAawAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-13T23:41:30.513Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-13T23:41:30.513Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Facultate\\AN_3_SEM_1\\PID\\PID_Framework\\Framework\\View\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Framework\\View\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Facultate\\AN_3_SEM_1\\PID\\PID_Framework\\Framework\\View\\MainWindow.xaml.cs",
               "RelativeToolTip": "Framework\\View\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAvwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-13T23:29:33.901Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Utils.cs",
               "DocumentMoniker": "C:\\Facultate\\AN_3_SEM_1\\PID\\PID_Framework\\Algorithms\\Utilities\\Utils.cs",
               "RelativeDocumentMoniker": "Algorithms\\Utilities\\Utils.cs",
@@ -77,20 +93,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "MenuCommands.cs",
               "DocumentMoniker": "C:\\Facultate\\AN_3_SEM_1\\PID\\PID_Framework\\Framework\\ViewModel\\Commands\\MenuCommands.cs",
               "RelativeDocumentMoniker": "Framework\\ViewModel\\Commands\\MenuCommands.cs",
               "ToolTip": "C:\\Facultate\\AN_3_SEM_1\\PID\\PID_Framework\\Framework\\ViewModel\\Commands\\MenuCommands.cs",
               "RelativeToolTip": "Framework\\ViewModel\\Commands\\MenuCommands.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAAwCAABGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-07T08:19:41.384Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Facultate\\AN_3_SEM_1\\PID\\PID_Framework\\Framework\\View\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Framework\\View\\MainWindow.xaml",
@@ -102,7 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Tools.cs",
               "DocumentMoniker": "C:\\Facultate\\AN_3_SEM_1\\PID\\PID_Framework\\Algorithms\\Tools\\Tools.cs",
               "RelativeDocumentMoniker": "Algorithms\\Tools\\Tools.cs",
@@ -110,8 +126,7 @@
               "RelativeToolTip": "Algorithms\\Tools\\Tools.cs",
               "ViewState": "AgIAAMwAAAAAAAAAAAAuwKkAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-07T08:01:50.245Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-07T08:01:50.245Z"
             }
           ]
         }

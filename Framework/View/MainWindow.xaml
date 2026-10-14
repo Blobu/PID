@@ -157,6 +157,12 @@
             <MenuItem Header="Pointwise operations"
                       Background="{Binding Path=Theme.MenuItemBackgroundColor}"
                       Foreground="{Binding Path=Theme.MenuItemForegroundColor}">
+                <MenuItem Header="Contrast And Brightness"
+                      Command="{Binding Path=MenuCommands.ContrastBrightnessImageCommand}"
+                      CommandParameter="{Binding ElementName=processedImageCanvas}"/>
+                <MenuItem Header="Contrast And Brightness with Gamma"
+                      Command="{Binding Path=MenuCommands.ContrastBrightnessGammaImageCommand}"
+                      CommandParameter="{Binding ElementName=processedImageCanvas}"/>
 
             </MenuItem>
 

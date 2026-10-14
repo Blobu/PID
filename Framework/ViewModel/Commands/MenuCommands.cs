@@ -575,6 +575,46 @@ namespace Framework.ViewModel.Commands
         #endregion
 
         #region Pointwise operations
+
+        #region Contrast & Brightness
+        private ICommand _contrastBrightnessImageCommand;
+        public ICommand ContrastBrightnessImageCommand
+        {
+            get
+            {
+                if (_contrastBrightnessImageCommand == null)
+                    _contrastBrightnessImageCommand = new RelayCommand(ContrastBrightnessImage);
+                return _contrastBrightnessImageCommand;
+            }
+        }
+        private void ContrastBrightnessImage(object parameter)
+        {
+            if (!IsImageLoaded())
+                return;
+            List<string> labels = new List<string>
+            {
+                "Contrast (a):",
+                "Brightness (b):"
+            };
+            DialogWindow window = new DialogWindow(_mainVM, labels);
+            window.ShowDialog();
+            List<double> values = window.GetValues();
+            if (values == null)
+                return;
+            double a = values[0];
+            double b = values[1];
+            ClearProcessedCanvas(parameter);
+            if (GrayInitialImage != null)
+            {
+                GrayProcessedImage = PointwiseOperations.ApplyLUT(GrayInitialImage,PointwiseOperations.ContrastAndBrightness(a, b));
+            }
+            else if (ColorInitialImage != null)
+            {
+                ColorProcessedImage = PointwiseOperations.ApplyLUT(ColorInitialImage, PointwiseOperations.ContrastAndBrightness(a, b));
+            }
+        }
+        #endregion
+
         #endregion
 
         #region Thresholding
