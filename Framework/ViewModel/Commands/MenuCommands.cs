@@ -613,6 +613,46 @@ namespace Framework.ViewModel.Commands
                 ColorProcessedImage = PointwiseOperations.ApplyLUT(ColorInitialImage, PointwiseOperations.ContrastAndBrightness(a, b));
             }
         }
+
+
+
+        private ICommand _contrastBrightnessGammaImageCommand;
+        public ICommand ContrastBrightnessGammaImageCommand
+        {
+            get
+            {
+                if (_contrastBrightnessGammaImageCommand == null)
+                    _contrastBrightnessGammaImageCommand = new RelayCommand(ContrastBrightnessGammaImage);
+                return _contrastBrightnessGammaImageCommand;
+            }
+        }
+
+        private void ContrastBrightnessGammaImage(object parameter)
+        {
+            if (!IsImageLoaded())
+                return;
+            List<string> labels = new List<string>
+            {
+                "Gamma:"
+            };
+            DialogWindow window = new DialogWindow(_mainVM, labels);
+            window.ShowDialog();
+            List<double> values = window.GetValues();
+            if (values == null)
+                return;
+            double gamma = values[0];
+            ClearProcessedCanvas(parameter);
+            if (GrayInitialImage != null)
+            {
+                GrayProcessedImage = PointwiseOperations.ApplyLUT(GrayInitialImage, PointwiseOperations.ContrastAndBrightnessGammaOperator(gamma));
+            }
+            else if (ColorInitialImage != null)
+            {
+                ColorProcessedImage = PointwiseOperations.ApplyLUT(ColorInitialImage, PointwiseOperations.ContrastAndBrightnessGammaOperator(gamma));
+            }
+        }
+
+
         #endregion
 
         #endregion
